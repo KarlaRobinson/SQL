@@ -40,7 +40,8 @@
 </datatypes><table x="72" y="36" name="Akumnos">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
-<default>NULL</default></row>
+<default>NULL</default><relation table="Locacion" row="id" />
+</row>
 <row name="nombre" null="1" autoincrement="0">
 <datatype>CHAR</datatype>
 <default>NULL</default></row>
@@ -59,15 +60,11 @@
 <row name="create_at" null="1" autoincrement="0">
 <datatype>TIMESTAMP</datatype>
 <default>NULL</default></row>
-<row name="id_Locacion" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Locacion" row="id" />
-</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="311" y="44" name="Locacion">
+<table x="308" y="94" name="Locacion">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
