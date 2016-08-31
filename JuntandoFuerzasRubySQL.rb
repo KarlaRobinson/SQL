@@ -1,3 +1,7 @@
+# rake db:drop
+# rake db:setup
+# rake db:seed
+
 require 'sqlite3'
 
 class Chef
@@ -13,7 +17,7 @@ class Chef
   def self.create_table
     Chef.db.execute(
       <<-SQL
-        CREATE TABLE chefs (
+        CREATE TABLE IF NOT EXISTS chefs (
           id INTEGER PRIMARY KEY AUTOINCREMENT,
           first_name VARCHAR(64) NOT NULL,
           last_name VARCHAR(64) NOT NULL,
